@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+</head>
+<body>
+  <div class="titre">
+    <h1>Analyse des sentiments</h1>
+    <h2>Rescensement des tweets #RéformeDesRetraites</h2>
+  </div>
+
+  <div id="graph_global">
+    <iframe src="static/python/graph_global.html" width="300" height="300" frameborder="0"></iframe>
+    <img src="{{ url_for('static', filename='python/wordcloud.png') }}" alt="WordCloud">
+    <iframe src="static/python/tableUSER.html" width="300" height="300" frameborder="0"></iframe>
+  </div>
+
+  <div id="tableau_stats">
+    <iframe src="static/python/tableRT.html" width="500" height="300" frameborder="0"></iframe>
+    <iframe src="static/python/graph_date.html" width="600" height="300" frameborder="0"></iframe>
+  </div>
+  <div id="tableau_stats2">
+  <iframe src="static/python/graph_jour.html" width="300" height="300" frameborder="0"></iframe>
+  <iframe src="static/python/tableLIKES.html" width="500" height="300" frameborder="0"></iframe>
+  <iframe src="static/python/graph_heure.html" width="300" height="300" frameborder="0"></iframe>
+  </div>
+  <div id="tableau_stats3">
+    <iframe src="static/python/graph_evenement.html" width="600" height="300" frameborder="0"></iframe>
+  <iframe src="static/python/tableQUOTES.html" width="500" height="300" frameborder="0"></iframe>
+  </div>
+</body>
+</html>
